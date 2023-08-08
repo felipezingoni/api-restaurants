@@ -1,0 +1,21 @@
+curl -i -X PATCH                                        \
+       -H 'Content-Type: application/json'              \
+       -H 'X-User-Email: felipe@gmail.com'               \
+       -H 'X-User-Token: n31YwrxX8QsRg7y_TgJ4'          \
+       -d '{ "restaurant": { "name": "Kansas Restaurant" } }'    \
+       http://localhost:3000/api/v1/restaurants/1
+
+
+
+curl -i -X POST                                                              \
+     -H 'Content-Type: application/json'                                     \
+     -H 'X-User-Email: felipe@gmail.com'                                      \
+     -H 'X-User-Token: n31YwrxX8QsRg7y_TgJ4'                                 \
+     -d '{ "restaurant": { "name": "Tea Connection", "address": "Montevideo 274" } }' \
+     http://localhost:3000/api/v1/restaurants
+
+
+curl -i -X DELETE                               \
+     -H 'X-User-Email: felipe@gmail.com'         \
+     -H 'X-User-Token: n31YwrxX8QsRg7y_TgJ4'    \
+     http://localhost:3000/api/v1/restaurants/5
